@@ -1,0 +1,75 @@
+#2 player dice game that asks for player names and then replays with a selcetion
+#Zak 25%, Sam 25%, Nick 25%, Chayton 25%
+import cmd
+import textwrap
+import sys
+import os
+
+#while True:
+
+  #start = input("\nEnter 1 for dice, 2 for magic 8 ball, : ")
+'''
+  if start == "1":
+    import dice
+    print(dice)
+  
+  elif start == "2":
+    import make8ball
+    print(make8ball)
+  
+  if start == "3":
+    print("Goodbye")
+    break
+'''
+'''fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  if x == "banana":
+    continue
+  print(x)
+
+Starts = ["1",  "2", "3"]
+for x in start:
+  if x == "1":
+    import dice
+    print(dice)
+  if x == "2":
+    continue
+    import make8ball
+    print(make8ball)
+  else:
+    break
+  print("goodbye")
+  '''
+#tile screen
+
+
+def title_screen(option):
+  option = input("Enter 1,2,3 ")
+  if option.lower() == ("1"):
+    start_dice_game()
+  elif option.lower() == ("2"):
+    magic_8_ball()
+  elif option.lower() == ("3"):
+    print("Goodbye")
+    sys.exit()
+  while option.lower() not in ['1', '2', '3']:
+    print("Please enter a valid comand")
+    option = input("> ")
+  if option.lower() == ("1"):
+    start_dice_game()
+  elif option.lower() == ("2"):
+    magic_8_ball()
+  elif option.lower() == ("3"):
+    print("Goodbye")
+    sys.exit()
+  return
+def start_dice_game():
+  import dice
+  print(dice)
+  title_screen()
+
+def magic_8_ball():
+  import make8ball
+  print(make8ball)
+  title_screen()
+
